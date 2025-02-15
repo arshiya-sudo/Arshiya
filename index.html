@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ثبت‌نام</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+    </style>
+</head>
+<body>
+    <!-- start html  -->
+    <div class="form-container">
+        <h2>sign up</h2>
+        <form id="signupForm" action="index.php" method="post">
+            <input type="text" id="fullName" placeholder="username" name="fullName">
+            <div class="error" id="fullNameError"></div>
+            
+            <input type="email" id="email" placeholder="Email" name="email">
+            <div class="error" id="emailError"></div>
+            
+            <input type="password" id="password" placeholder="Password" name="Password">
+            <div class="error" id="passwordError"></div>
+            
+            <input type="password" id="confirmPassword" placeholder="confirm password" name="confirmPassword">
+            <div class="error" id="confirmPasswordError"></div>
+            
+            <button type="submit">sign in</button>
+        </form>
+    </div>
+    <!-- end html -->
+    <!-- link js -->
+    <script src="index.js"></script>
+</body>
+</html>
