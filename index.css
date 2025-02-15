@@ -1,45 +1,124 @@
 
-
+:root{
+    --primery-color :#5363f97d;
+    --light-color : #ffffff;
+    --dark-color:#1e1e1e;
+    --glass-first:#ffffff26;
+    --glass-second:#0000001a;
+    --glass-third:#ffffff4d;
+}
+*{
+    color: var(--dark-color);
+}
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--light-color);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+.darkmode{
+    --light-color : #1e1e1e;
+    --dark-color:#ffffff;
+}
 .form-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
-    box-shadow: 5px 7px 20px rgba(180, 8, 8, 0.43);
+    box-shadow: 5px 7px 20px var(--primery-color);
 }
 input, button {
+    background-color: transparent;
     width: 250px;
     padding: 10px;
     margin: 5px 0;
-    border: none;
-    border-radius: 5px;
-    background: #333;
-    color: #fff;
+    border: 0.5px solid var(--dark-color);
+    border-radius: 15px;
 }
 button {
     width: 100%;
-    background: #d20e0e54;
     cursor: pointer;
     margin-top: 20px;
 }
 button:hover {
-    background: #aa3b3b7f;
+    background: #0d17da6d;
 }
 .error {
     color: red;
     font-size: 12px;
     margin-bottom: 5px;
 }
+    /* SWITCH MODE */
+    #theme-switch {
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        background-color: var(--base-variant);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    #theme-switch svg {
+        fill: var(--primary-color);
+    }
+    #theme-switch svg:last-child {
+        display: none;
+    }
+    .darkmode #theme-switch svg:first-child {
+        display: none;
+    }
+    .darkmode #theme-switch svg:last-child {
+        display: block;
+    }
+    /* glass */
+    .glass-form {
+        width: 320px;
+        padding: 20px;
+        border-radius: 15px;
+        background: var(--glass-first);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--glass-second);
+        text-align: center;
+        color: white;
+    }
+    .glass-form h2 {
+        margin-bottom: 15px;
+    }
+    .glass-form input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        background: #ffffff4d;
+        color: #fff;
+        font-size: 16px;
+    }
+    .glass-form input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .glass-form button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background:#ffffff4d;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .glass-form button:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+    
